@@ -13,8 +13,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Reddit Clone App',
       theme: Pallete.darkModeAppTheme,
-      home: const SizedBox(
-        child: Text("Hello, World"),
+      home: Column(
+        children: [
+          SizedBox(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(
+                minWidth: 600,
+              ),
+              child: const Text(
+                "Hello,World",
+                style: TextStyle(color: Colors.amber),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
